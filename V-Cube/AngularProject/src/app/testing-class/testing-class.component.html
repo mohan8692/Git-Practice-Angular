@@ -1,0 +1,143 @@
+
+<p>testing-class works!</p>
+
+<h1>Interpollation</h1>
+<h2>{{title}}</h2>
+
+<h5 class="bg-primary mt-10">{{1+5}}</h5>
+
+<h5>{{"Number IS" + InterpollationMethod()}}</h5>
+
+<div class="alert alert-primary" role="alert">
+    This is a primary alert—check it out!
+  </div>
+
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-secondary">Left</button>
+    <button type="button" class="btn btn-secondary">Middle</button>
+    <button type="button" class="btn btn-secondary">Right</button>
+  </div>
+  <div class="input-group mb-3 mt-5">
+    <span class="input-group-text" id="basic-addon1">@</span>
+    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+
+<p>Peoperty Binding</p>
+<br>
+<h2 [class] = "PropertyBinding">Examle Of Property Binding</h2>
+<h4 bind-class="PropertyBinding">Example Of Propert Binding Bind.Class</h4>
+<p bind-class="PropertyBindingCustomeClassVariable">Example -3</p>
+<input type="text" value="AttibuteBinding">
+<p>Examle Attribute Bindingg</p>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <td>Peson</td>
+      <td [attr.colspan]  ="colvalue" class="text-center">Member</td>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+      <td>11111</td>
+      <td>22222</td>
+      <td>33333</td>
+    </tr>
+    <tr>
+      <td>11111</td>
+      <td>22222</td>
+      <td>33333</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="highlights">Single Class Binding</div>
+<div [class.highlights]="ClassBindingExample">Single Class Binding</div>
+
+<div [ngClass]="NgCLassCheckingexample ? 'highlights':'highlights2'">Class Binding</div>
+<h4>Type 2 For ng class</h4>
+<div [ngClass]="GetClassByUsingFuction()">example of ngclass type 2</div>
+
+<h5>Style Binding Example</h5>
+<div [style]="StyleBindingVariable">Style Binding Example</div>
+
+<h5>EventBindingExample</h5>
+<div (click)="EventBindingMethod()">EventBindingMethod</div>
+<input type="text" id="id" name="name" (focus)="OnFocus()">
+<div>Blur</div>
+<input type="text" id="id" name="name" (blur)="OnBlur()">
+<div>MouseOver</div>
+<input type="text" (mouseover)="MouseOver()" (mouseout)=" MouseOut()">
+<h2>Two-way Binding Example</h2>    
+<input type="text" [(ngModel)]="fullName"/>   
+<h6>{{fullName}}</h6>
+ <h1 appTestingClass >Directive</h1>
+
+ <h2>ngIf Conditions</h2>
+ <div *ngIf= "!IsCondition" class="bg-dark">Testing Of Condition true</div>
+
+  <div *ngIf= "!IsCondition;else elseblock" class="bg-primary">Testing Of Condition true</div>
+  <ng-template #elseblock>
+    <div class="bg-warning">Testing Of Condiion False</div>
+  </ng-template>
+
+  <div *ngIf="conditionchecking ; then success; else failure"></div>
+  <ng-template #success>
+    <h1>Success</h1>
+  </ng-template>
+  <ng-template #failure>
+    <h1>Failure</h1>
+  </ng-template>
+
+  <ul>
+    <li *ngFor="let topics of Languages; index as i ;first as f; last as l;odd as o;even as e">
+        <!--p [ngClass]="e ? 'bg-primary':'bg-warning'">{{topics}}</p--> 
+        <p [ngClass]="{'bg-primary':f ,'bg-warning':l}">{{topics}}</p> 
+
+    </li>
+  </ul>
+
+  <table class="table table-bordered">
+    <thead>
+      <th>Maths</th>
+      <th>English</th>
+      <th>Physics</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let marks of Marks ;even as e ;odd as o" [ngClass]="{'bg-primary':e,'bg-warning':o}">
+        <td>{{marks.Maths}}</td>
+        <td>{{marks.English}}</td>
+        <td>{{marks.Physics}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>{{name}}</h1>
+  <h1>{{name | lowercase}}</h1>
+  <h1>{{name | uppercase}}</h1>
+  <p>{{user | json}}</p>
+  <h2>{{dateFormate.date | date:'fullDate' | uppercase}}</h2>
+  <h4>{{title}}</h4>
+  <h4>{{title | slice:2:4}}</h4>
+  <h1>{{colvalue | currency:'INR'}}</h1>
+
+  <h1>custome Pipes</h1>
+
+  <table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th>S.no</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Gmail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of userData; index as i">
+        <td>{{i+1}}</td>
+        <td>{{data.firstname}}</td>
+        <td>{{data.lastname}}</td>
+        <td>{{data.gmail}}</td>
+      </tr>
+    </tbody>
+  </table>
