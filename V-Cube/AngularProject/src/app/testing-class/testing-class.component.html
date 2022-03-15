@@ -123,6 +123,8 @@
 
   <h1>custome Pipes</h1>
 
+  <label for="exampleDataList" class="form-label">Serach Table Content</label>
+  <input class="form-control" id="exampleDataList" placeholder="Type to search..." [(ngModel)]="serchtext">
   <table class="table">
     <thead class="table-dark">
       <tr>
@@ -133,7 +135,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let data of userData; index as i">
+      <tr *ngFor="let data of userData | filter : serchtext ; index as i">
         <td>{{i+1}}</td>
         <td>{{data.firstname}}</td>
         <td>{{data.lastname}}</td>

@@ -18,6 +18,7 @@ export class TestingClassComponent implements OnInit {
   IsCondition = true;
   conditionchecking=false; 
   name ="Mohan Madaparthi";
+  serchtext ="";
   user=[{'name':'mohan',"marks":200},{'name':'kishore','marks':300}];
   userData = [
     {
