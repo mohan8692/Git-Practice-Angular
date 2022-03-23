@@ -1,5 +1,23 @@
 <main class="container">
-<h1 class="">Mohan Madaparthi</h1>
-
-<app-testing-class></app-testing-class>
+    <!--<app-testing-class [Communicate]="communicate"></app-testing-class>-->
+    <!--<app-testing-class></app-testing-class-->
+    <header>
+        <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="activered" [routerLinkActiveOptions]="{exact:true}"  aria-current="page" routerLink="" >Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="activered" routerLink="/user">User</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="activered"  routerLink="/aboutus">aboutus</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="activered" routerLink="/testing">Testing</a>
+            </li>
+          </ul>
+    </header>
+    <h1>{{passdata}}</h1>
+    <app-parentchildinteractions [Relation] = "title" (childtoParent)="passData($event)"></app-parentchildinteractions>
+    <router-outlet></router-outlet>
 </main>

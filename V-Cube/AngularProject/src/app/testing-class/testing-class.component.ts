@@ -1,4 +1,4 @@
-import { Component, Directive, OnInit } from '@angular/core';
+import { Component, Directive, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-testing-class',
@@ -6,7 +6,6 @@ import { Component, Directive, OnInit } from '@angular/core';
   styleUrls: ['./testing-class.component.css']
 })
 export class TestingClassComponent implements OnInit {
-
   public title = "Interpollation";
   public PropertyBinding ="bg-warning border border-danger";
   public PropertyBindingCustomeClassVariable ="propertyBindingExampleClass";
@@ -43,7 +42,6 @@ export class TestingClassComponent implements OnInit {
     }
   ];
   dateFormate={'Country':'India','date':new Date()};
-
   InterpollationMethod(){
     //return "Interpollation Method Testing";
     return 5;
@@ -73,16 +71,16 @@ export class TestingClassComponent implements OnInit {
   MouseOut(){
     console.log("OnMouseOut");
   }
-  constructor() { }
+  constructor() {
+   }
 
   Languages =["html","javascript","java","Powe BI","Bootstrap"]
   Marks =[{'Maths':45,'English':54,'Physics':99},
           {'Maths':45,'English':54,'Physics':99}, 
           {'Maths':45,'English':54,'Physics':99}           
   ];
-
   ngOnInit(): void {
+    
   }
-
 
 }

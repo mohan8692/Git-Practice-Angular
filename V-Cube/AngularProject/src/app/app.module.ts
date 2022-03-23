@@ -6,13 +6,21 @@ import { AppComponent } from './app.component';
 import { TestingClassComponent } from './testing-class/testing-class.component';
 import { TestingClassDirective } from './testing-class/testing-class.directive';
 import { FilterPipe } from './testing-class/pipes/filter.pipe';
+import { ParentchildinteractionsComponent } from './component-interactions/parentchildinteractions/parentchildinteractions.component';
+import { UserComponent } from './user/user/user.component';
+import { HomeComponent } from './home/home/home.component';
+import { AboutusComponent } from './aboutus/aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestingClassComponent,
     TestingClassDirective,
-    FilterPipe
+    FilterPipe,
+    ParentchildinteractionsComponent,
+    UserComponent,
+    HomeComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,
