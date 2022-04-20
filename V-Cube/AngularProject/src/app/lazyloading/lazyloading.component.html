@@ -1,0 +1,13 @@
+<p>lazyloading works!</p>
+
+<button (click)="usersdata()">Get Users</button>
+
+<div class="p-1 m-2 border text-center">
+    <div *ngFor="let data of userDetails; index as i">{{i+1}}.{{data.name}}</div>
+</div>
+<button (click) ="postdatamethod()">Post Data</button>
+<!--<div class="p-1 m-2 border text-center">
+    <div *ngFor="let data of postdetails; index as i">{{i+1}}.{{data.name}}</div>
+</div>-->
+<button (click) ="pachUsers()">patch Data</button>
+<button (click) ="deleteData()">delete Data</button>

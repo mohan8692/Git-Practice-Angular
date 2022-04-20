@@ -4,17 +4,23 @@
     <header>
         <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link" routerLinkActive="activered" [routerLinkActiveOptions]="{exact:true}"  aria-current="page" routerLink="" >Home</a>
+              <a class="nav-link" routerLinkActive="activered" aria-current="page" routerLink="/home" >Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" routerLinkActive="activered" routerLink="/user">User</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLinkActive="activered"  routerLink="/aboutus">aboutus</a>
+              <a class="nav-link" routerLinkActive="activered"  [routerLink]="['/aboutus',{outlets:{Location:['location'],Feedback:['feedback']}}]">aboutus</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" routerLinkActive="activered" routerLink="/testing">Testing</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="activered" routerLink="/lazyloading">Lazy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="activered" routerLink="/forms">Forms</a>
+        </li>
           </ul>
     </header>
     <h1>{{passdata}}</h1>
